@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "type": "string"
+    },
+    "_id": {
+      "type": "string"
+    },
+    "_creationDate": {
+      "type": "string"
+    },
+    "_name": {
+      "type": "string"
+    },
+    "planCost": {
+      "type": "integer"
+    },
+    "availableServices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "_type": {
+            "type": "string"
+          },
+          "serviceName": {
+            "type": "string"
+          },
+          "deductible": {
+            "type": "integer"
+          },
+          "copay": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "_type",
+          "serviceName",
+          "deductible",
+          "copay"
+        ]
+      }
+    }
+  },
+  "required": [
+    "_type",
+    "_id",
+    "_creationDate",
+    "_name",
+    "planCost",
+    "availableServices"
+  ]
+}
